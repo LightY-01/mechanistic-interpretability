@@ -1,0 +1,75 @@
+GPT(
+  (word_embeddings): Embedding(98, 128)
+  (pos_embeddings): Embedding(3, 128)
+  (blocks): ModuleList(
+    (0-1): 2 x TransformerBlock(
+      (attention): GroupedQueryAttention(
+        (q_proj): Linear(in_features=128, out_features=128, bias=False)
+        (k_proj): Linear(in_features=128, out_features=128, bias=False)
+        (v_proj): Linear(in_features=128, out_features=128, bias=False)
+        (output_proj): Linear(in_features=128, out_features=128, bias=False)
+      )
+      (first_norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (ln1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+  (proj): Linear(in_features=128, out_features=98, bias=True)
+)
+
+Step     0 | Train Loss: 4.6841 Acc:   0.94% | Val Loss: 4.6986 Acc:   1.01%
+Step   100 | Train Loss: 3.9561 Acc:  10.51% | Val Loss: 5.2152 Acc:   0.05%
+Step   200 | Train Loss: 3.2600 Acc:  26.02% | Val Loss: 5.6512 Acc:   0.00%
+Step   300 | Train Loss: 2.5945 Acc:  42.27% | Val Loss: 6.0757 Acc:   0.10%
+Step   400 | Train Loss: 2.0435 Acc:  56.12% | Val Loss: 6.4237 Acc:   0.11%
+Step   500 | Train Loss: 1.6149 Acc:  68.27% | Val Loss: 6.7180 Acc:   0.25%
+Step   600 | Train Loss: 1.2587 Acc:  77.19% | Val Loss: 6.9719 Acc:   0.28%
+Step   700 | Train Loss: 0.9965 Acc:  84.91% | Val Loss: 7.1594 Acc:   0.41%
+Step   800 | Train Loss: 0.7961 Acc:  89.74% | Val Loss: 7.3323 Acc:   0.49%
+Step   900 | Train Loss: 0.6428 Acc:  93.26% | Val Loss: 7.4667 Acc:   0.52%
+Step  1000 | Train Loss: 0.5799 Acc:  93.87% | Val Loss: 7.4912 Acc:   0.80%
+Step  1100 | Train Loss: 0.4710 Acc:  96.02% | Val Loss: 7.5467 Acc:   0.82%
+Step  1200 | Train Loss: 0.4414 Acc:  95.90% | Val Loss: 7.5824 Acc:   1.10%
+Step  1300 | Train Loss: 0.4048 Acc:  96.08% | Val Loss: 7.5702 Acc:   1.10%
+Step  1400 | Train Loss: 0.3438 Acc:  97.24% | Val Loss: 7.4551 Acc:   1.29%
+Step  1500 | Train Loss: 0.3281 Acc:  97.33% | Val Loss: 7.3974 Acc:   1.60%
+Step  1600 | Train Loss: 0.2916 Acc:  97.90% | Val Loss: 7.2651 Acc:   2.21%
+Step  1700 | Train Loss: 0.2533 Acc:  98.57% | Val Loss: 7.2158 Acc:   2.29%
+Step  1800 | Train Loss: 0.2464 Acc:  98.69% | Val Loss: 7.0625 Acc:   2.99%
+Step  1900 | Train Loss: 0.2766 Acc:  97.97% | Val Loss: 6.9012 Acc:   3.48%
+Step  2000 | Train Loss: 0.2212 Acc:  98.79% | Val Loss: 6.7195 Acc:   4.27%
+Step  2100 | Train Loss: 0.2005 Acc:  98.97% | Val Loss: 6.6241 Acc:   4.86%
+Step  2200 | Train Loss: 0.1786 Acc:  98.94% | Val Loss: 6.4497 Acc:   5.53%
+Step  2300 | Train Loss: 0.1766 Acc:  98.94% | Val Loss: 6.2127 Acc:   6.72%
+Step  2400 | Train Loss: 0.1492 Acc:  99.33% | Val Loss: 6.0175 Acc:   7.80%
+Step  2500 | Train Loss: 0.1223 Acc:  99.70% | Val Loss: 5.8022 Acc:   9.16%
+Step  2600 | Train Loss: 0.1241 Acc:  99.24% | Val Loss: 5.5718 Acc:   9.40%
+Step  2700 | Train Loss: 0.1130 Acc:  99.48% | Val Loss: 5.1553 Acc:  12.54%
+Step  2800 | Train Loss: 0.0818 Acc:  99.67% | Val Loss: 4.6846 Acc:  14.83%
+Step  2900 | Train Loss: 0.0663 Acc:  99.73% | Val Loss: 4.2534 Acc:  17.35%
+Step  3000 | Train Loss: 0.0678 Acc:  99.64% | Val Loss: 3.8075 Acc:  19.95%
+Step  3100 | Train Loss: 0.0416 Acc:  99.91% | Val Loss: 3.3275 Acc:  24.44%
+Step  3200 | Train Loss: 0.0404 Acc:  99.91% | Val Loss: 2.8174 Acc:  30.71%
+Step  3300 | Train Loss: 0.0274 Acc: 100.00% | Val Loss: 2.3538 Acc:  37.54%
+Step  3400 | Train Loss: 0.0306 Acc:  99.97% | Val Loss: 1.7415 Acc:  48.86%
+Step  3500 | Train Loss: 0.0132 Acc:  99.97% | Val Loss: 1.1191 Acc:  65.43%
+Step  3600 | Train Loss: 0.0170 Acc:  99.97% | Val Loss: 0.6470 Acc:  81.57%
+Step  3700 | Train Loss: 0.0058 Acc: 100.00% | Val Loss: 0.2881 Acc:  94.11%
+Step  3800 | Train Loss: 0.0328 Acc:  99.88% | Val Loss: 0.2783 Acc:  93.43%
+Step  3900 | Train Loss: 0.0038 Acc: 100.00% | Val Loss: 0.0517 Acc:  99.59%
+Step  4000 | Train Loss: 0.0033 Acc: 100.00% | Val Loss: 0.0290 Acc:  99.82%
+Step  4100 | Train Loss: 0.0017 Acc: 100.00% | Val Loss: 0.0128 Acc:  99.95%
+Step  4200 | Train Loss: 0.0063 Acc: 100.00% | Val Loss: 0.0355 Acc:  99.59%
+Step  4300 | Train Loss: 0.0028 Acc: 100.00% | Val Loss: 0.0119 Acc: 100.00%
+Step  4400 | Train Loss: 0.0022 Acc: 100.00% | Val Loss: 0.0085 Acc: 100.00%
+Step  4500 | Train Loss: 0.0012 Acc: 100.00% | Val Loss: 0.0047 Acc:  99.98%
+Step  4600 | Train Loss: 0.0636 Acc:  99.12% | Val Loss: 0.1596 Acc:  96.27%
+Step  4700 | Train Loss: 0.0022 Acc: 100.00% | Val Loss: 0.0069 Acc: 100.00%
+Step  4800 | Train Loss: 0.0028 Acc: 100.00% | Val Loss: 0.0069 Acc: 100.00%
+Step  4900 | Train Loss: 0.0017 Acc: 100.00% | Val Loss: 0.0044 Acc: 100.00%
+Step  5000 | Train Loss: 0.0012 Acc: 100.00% | Val Loss: 0.0034 Acc: 100.00%
+Step  5100 | Train Loss: 0.0024 Acc: 100.00% | Val Loss: 0.0071 Acc: 100.00%
+Step  5200 | Train Loss: 0.0035 Acc: 100.00% | Val Loss: 0.0074 Acc: 100.00%
+Step  5300 | Train Loss: 0.0020 Acc: 100.00% | Val Loss: 0.0043 Acc: 100.00%
+Step  5400 | Train Loss: 0.0011 Acc: 100.00% | Val Loss: 0.0029 Acc:  99.98%
+Step  5500 | Train Loss: 0.0025 Acc: 100.00% | Val Loss: 0.0073 Acc:  99.98%
+Step  5600 | Train Loss: 0.0035 Acc: 100.00% | Val Loss: 0.0069 Acc: 100.00%
